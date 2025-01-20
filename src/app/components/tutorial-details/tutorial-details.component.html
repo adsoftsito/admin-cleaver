@@ -1,0 +1,96 @@
+<div *ngIf="currentTutorial" class="edit-form">
+  <h4>Datos del estudiante</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Ap. Paterno</label>
+      <input
+        type="text"
+        class="form-control"
+        id="appPaterno"
+        [(ngModel)]="currentTutorial.appPaterno"
+        name="appPaterno"
+      />
+    </div>
+
+
+
+  </form>
+<!-- R1 -->
+ 
+{{ this.MD }} , {{ this.MI }} , {{ this.MS }} , {{ this.MC }} <br>
+{{ this.LD }} , {{ this.LI }} , {{ this.LS }} , {{ this.LC }} <br>
+{{ this.TotD }} , {{ this.TotI }} ,  {{ this.TotS }} ,  {{ this.TotC }} <br>
+
+<br>
+{{ this.ResultMD }} - {{ this.ResultMI }} - {{ this.ResultMS }} - {{ this.ResultMC }} <br>
+{{ this.ResultLD }} - {{ this.ResultLI }} - {{ this.ResultLS }} - {{ this.ResultLC }} <br>
+{{ this.ResultTotD }} - {{ this.ResultTotI }} - {{ this.ResultTotS }} - {{ this.ResultTotC }} <br>
+
+<br>
+<!--
+{{ this.FinalT }} - {{ this.FinalM }} - {{ this.FinalL}}  <br>
+{{ this.FinalResult }}  <br>
+{{ this.Result }}  <br>
+{{ this.message }}  <br>
+-->
+  
+  {{ tutorial.FinalT }} - {{ tutorial.FinalM }} - {{ tutorial.FinalL}}  <br>
+  {{ tutorial.FinalResult }}  <br>
+  {{ tutorial.Result }}  <br>
+  {{ tutorial.message }}  <br>
+  
+<!--
+
+  {{ tutorial.gentilM }} - {{ tutorial.gentilL }} |
+  {{ tutorial.menteabiertaM }} - {{ tutorial.menteabiertaL }} |
+  {{ tutorial.quisquillosoM }} - {{ tutorial.quisquillosoL }} |
+  {{ tutorial.receptivoM }} - {{ tutorial.receptivoL }} |
+  <br>
+
+  {{ tutorial.humildeM }} - {{ tutorial.humildeL }} |
+  {{ tutorial.complacienteM }} - {{ tutorial.complacienteL }} |
+  {{ tutorial.inconquistableM }} - {{ tutorial.inconquistableL }} |
+  {{ tutorial.cordialM }} - {{ tutorial.cordialL }} |
+  <br>
+
+  {{ tutorial.originalM }} - {{ tutorial.originalL }} |
+  {{ tutorial.animosoM }} - {{ tutorial.animosoL }} |
+  {{ tutorial.juguetonM }} - {{ tutorial.juguetonL }} |
+  {{ tutorial.moderadoM }} - {{ tutorial.moderadoL }} |
+  <br>
+  <br>
+-->
+
+  <!--
+  <button
+    class="badge badge-primary mr-2"
+    *ngIf="currentTutorial.published"
+    (click)="updatePublished(false)"
+  >
+    UnPublish
+  </button>
+  
+  <button
+    *ngIf="!currentTutorial.published"
+    class="badge badge-primary mr-2"
+    (click)="updatePublished(true)"
+  >
+    Publish
+  </button>
+
+
+  <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+    Delete
+  </button>
+
+  <button type="submit" class="badge badge-success" (click)="updateTutorial()">
+    Update
+  </button>
+  <p>{{ message }}</p>
+  -->
+</div>
+
+<div *ngIf="!currentTutorial">
+  <br />
+  <p>Cannot access this Tutorial...</p>
+</div>

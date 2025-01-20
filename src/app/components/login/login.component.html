@@ -1,0 +1,36 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+  
+      
+      <div class="form-group">
+        <label for="description">usuario</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="usuario"
+          name="description"
+        />
+        <span style="color: red"> <b>{{ this.usuarioError }}</b></span>
+        
+      </div>
+      <div class="form-group">
+        <label for="description">password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="password"
+          name="description"
+        />
+        <span style="color: red"> <b>{{ this.passwordError }}</b></span>
+    </div>
+
+    <div class="form-group">
+
+      <button (click)="saveTutorial()" class="btn btn-success">Ingresar</button>
+    </div>
+    <span style="color: red"> <b>{{ this.badCredentialsError }}</b></span>
+    
+  </div>

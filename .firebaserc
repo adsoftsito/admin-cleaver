@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "test-cleaver",
+    "admin-cleaver": "admin-cleaver"
+  },
+  "targets": {},
+  "etags": {}
+}
