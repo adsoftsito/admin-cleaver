@@ -1,8 +1,43 @@
 <div class="list row">
   <div class="col-md-6">
-    
+    <label for="description">Filtrar </label>
+
     <div class="form-group">
-      <label for="description">Filtrar por Carrera </label>
+
+      <label for="description">Periodo </label>
+
+      <select
+        class="form-control"
+        id="periodo"
+        required
+        [(ngModel)]="periodo"
+        name="periodo"
+        (change)="retrieveTutorialsByProgram()"
+      >
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      
+      </select>
+
+      <label for="description">Facultad </label>
+      <select
+        class="form-control"
+        id="facultad"
+        required
+        [(ngModel)]="facultad"
+        name="facultad"
+        (change)="retrieveTutorialsByProgram()"
+
+      >
+      <option value="fnt">Facultad de  Negocios y Teconologias, USBI Ixtac</option>
+      <option value="fi">Facultad de Ingenieria, USBI Ixtac</option>
+      
+      </select>
+
+
+      <label for="description">Carrera </label>
       <select
         class="form-control"
         id="programaInteres"

@@ -20,10 +20,14 @@ export class TutorialService {
     return this.tutorialsRef;
   }
 
-  getByProgram(programaInteres : string): AngularFirestoreCollection<Tutorial> {
+  getByProgram(programaInteres : string, periodo: string, facultad : string): AngularFirestoreCollection<Tutorial> {
     //return this.db.collection(this.dbPath, ref => ref.where('programaInteres','==', programaInteres )).valueChanges()
     //return this.tutorialsRef.('programaInteres','==', programaInteres)
-    return this.db.collection(this.dbPath, ref => ref.where('programaInteres', '==', programaInteres));
+    return this.db.collection(this.dbPath, ref => ref
+      .where('programaInteres', '==', programaInteres)
+      .where('periodo', '==', periodo)
+      .where('facultad', '==', facultad)
+    );
   }
 
   create(tutorial: Tutorial): any {

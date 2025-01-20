@@ -14,6 +14,8 @@ export class TutorialsListComponent implements OnInit {
   currentIndex = -1;
   title = '';
   programaInteres = '';
+  periodo = '';
+  facultad = '';
   n = 0;
 
   constructor(private tutorialService: TutorialService) { }
@@ -30,7 +32,7 @@ export class TutorialsListComponent implements OnInit {
 
   retrieveTutorialsByProgram(): void {
     //lert(this.programaInteres)
-    this.tutorialService.getByProgram(this.programaInteres).snapshotChanges().pipe(
+    this.tutorialService.getByProgram(this.programaInteres, this.periodo, this.facultad).snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
           ({ id: c.payload.doc.id, ...c.payload.doc.data() })
